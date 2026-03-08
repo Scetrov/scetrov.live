@@ -194,6 +194,8 @@ body::-webkit-scrollbar-corner,
   align-items: center;
   justify-content: center;
   line-height: 0;
+  position: relative;
+  animation: icon-glitch 5.5s infinite steps(1, end);
 }
 
 .chrome-socials a:hover {
@@ -207,10 +209,71 @@ body::-webkit-scrollbar-corner,
   height: 18px;
   filter: drop-shadow(0 0 8px rgba(108, 198, 255, 0.0));
   transition: filter 0.15s;
+  animation: icon-channel-shift 5.5s infinite steps(1, end);
 }
 
 .chrome-socials a:hover svg {
   filter: drop-shadow(0 0 8px rgba(108, 198, 255, 0.4));
+}
+
+.chrome-socials a:nth-child(2),
+.chrome-socials a:nth-child(2) svg {
+  animation-delay: 0.4s;
+}
+
+.chrome-socials a:nth-child(3),
+.chrome-socials a:nth-child(3) svg {
+  animation-delay: 0.9s;
+}
+
+.chrome-socials a:nth-child(4),
+.chrome-socials a:nth-child(4) svg {
+  animation-delay: 1.4s;
+}
+
+.chrome-socials a:nth-child(5),
+.chrome-socials a:nth-child(5) svg {
+  animation-delay: 1.9s;
+}
+
+.chrome-socials a:nth-child(6),
+.chrome-socials a:nth-child(6) svg {
+  animation-delay: 2.4s;
+}
+
+@keyframes icon-glitch {
+  0%, 86%, 100% { transform: none; }
+  87% { transform: translate(-1px, 1px); }
+  88% { transform: translate(2px, -1px); }
+  89% { transform: translate(-2px, 0) skewX(8deg); }
+  90% { transform: translate(1px, 1px); }
+  91% { transform: none; }
+}
+
+@keyframes icon-channel-shift {
+  0%, 86%, 100% {
+    filter:
+      drop-shadow(0 0 8px rgba(108, 198, 255, 0.0))
+      drop-shadow(0 0 0 rgba(255, 92, 138, 0.0));
+  }
+  87% {
+    filter:
+      drop-shadow(-1px 0 0 rgba(255, 92, 138, 0.7))
+      drop-shadow(1px 0 0 rgba(108, 198, 255, 0.65));
+  }
+  89% {
+    filter:
+      drop-shadow(-2px 0 0 rgba(255, 92, 138, 0.8))
+      drop-shadow(2px 0 0 rgba(108, 198, 255, 0.75));
+  }
+  90% {
+    filter:
+      drop-shadow(1px 0 0 rgba(255, 92, 138, 0.5))
+      drop-shadow(-1px 0 0 rgba(108, 198, 255, 0.5));
+  }
+  91% {
+    filter: drop-shadow(0 0 8px rgba(108, 198, 255, 0.0));
+  }
 }
 
 .aberration {
@@ -226,16 +289,35 @@ body::-webkit-scrollbar-corner,
   inset: 0;
   pointer-events: none;
   opacity: 0.25;
+  overflow: hidden;
 }
 
 .aberration::before {
-  transform: translateX(-1px);
   color: var(--coral);
+  animation: glitch-1 4s infinite linear;
 }
 
 .aberration::after {
-  transform: translateX(1px);
   color: var(--sky);
+  animation: glitch-2 4s 0.5s infinite linear;
+}
+
+@keyframes glitch-1 {
+  0%, 88%, 100%  { transform: translateX(-1px); clip-path: none; opacity: 0.25; }
+  89%  { transform: translate(-3px, -1px); clip-path: inset(10% 0 60% 0); opacity: 0.7; }
+  91%  { transform: translate(2px, 1px); clip-path: inset(50% 0 10% 0); opacity: 0.5; }
+  93%  { transform: translate(-1px, -2px); clip-path: inset(20% 0 40% 0); opacity: 0.8; }
+  95%  { transform: translateX(3px); clip-path: inset(70% 0 5% 0); opacity: 0.6; }
+  96%  { transform: translateX(-1px); clip-path: none; opacity: 0.25; }
+}
+
+@keyframes glitch-2 {
+  0%, 82%, 100%  { transform: translateX(1px); clip-path: none; opacity: 0.25; }
+  83%  { transform: translate(3px, 1px); clip-path: inset(40% 0 20% 0); opacity: 0.6; }
+  85%  { transform: translate(-2px, -1px); clip-path: inset(5% 0 55% 0); opacity: 0.7; }
+  87%  { transform: translate(2px, 2px); clip-path: inset(65% 0 10% 0); opacity: 0.5; }
+  89%  { transform: translate(-3px); clip-path: inset(15% 0 35% 0); opacity: 0.8; }
+  90%  { transform: translateX(1px); clip-path: none; opacity: 0.25; }
 }
 
 /* ── Terminal Body ──────────────────────────── */
