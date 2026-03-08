@@ -1,336 +1,223 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>scetrov — tree</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="terminal">
-      <div class="terminal-chrome">
-        <img src="profile.png" alt="scetrov" class="profile-pic" />
-        <span class="chrome-title aberration" data-text="scetrov@scetrov.live:~">scetrov@scetrov.live:~</span>
-        <div class="chrome-socials">
-          <a href="https://github.com/Scetrov" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
-              <path
-                d="M12 .296a12 12 0 0 0-3.794 23.386c.6.11.82-.258.82-.577v-2.165c-3.338.726-4.042-1.415-4.042-1.415-.546-1.387-1.333-1.757-1.333-1.757-1.09-.744.083-.728.083-.728 1.205.085 1.84 1.238 1.84 1.238 1.07 1.835 2.807 1.304 3.492.997.108-.775.419-1.304.762-1.603-2.665-.304-5.466-1.333-5.466-5.932 0-1.311.469-2.382 1.237-3.222-.124-.303-.536-1.526.118-3.18 0 0 1.01-.323 3.31 1.23a11.52 11.52 0 0 1 6.026 0c2.3-1.553 3.309-1.23 3.309-1.23.655 1.654.243 2.877.12 3.18.77.84 1.236 1.911 1.236 3.222 0 4.61-2.804 5.625-5.476 5.922.43.37.813 1.102.813 2.222v3.293c0 .322.218.694.825.576A12 12 0 0 0 12 .296Z" />
-            </svg>
-          </a>
-          <a href="https://www.nuget.org/profiles/Scetrov" target="_blank" rel="noopener noreferrer" aria-label="NuGet">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M4 8.5 12 4l8 4.5v7L12 20l-8-4.5z" />
-              <path d="M8 10.5 12 8l4 2.5v4L12 17l-4-2.5z" />
-            </svg>
-          </a>
-          <a href="https://x.com/scetrov" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
-            <svg
-              viewBox="0 0 24 24"
-              width="16"
-              height="16"
-              stroke="currentColor"
-              stroke-width="2"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
-              <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
-            </svg>
-          </a>
-          <a href="https://www.twitch.tv/scetrov" target="_blank" rel="noopener noreferrer" aria-label="Twitch">
-            <svg
-              viewBox="0 0 24 24"
-              width="16"
-              height="16"
-              stroke="currentColor"
-              stroke-width="2"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7" />
-            </svg>
-          </a>
-          <a href="https://www.youtube.com/@scetrov" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-            <svg
-              viewBox="0 0 24 24"
-              width="16"
-              height="16"
-              stroke="currentColor"
-              stroke-width="2"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round">
-              <path
-                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
-              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
-            </svg>
-          </a>
-          <a href="https://ko-fi.com/scetrov" target="_blank" rel="noopener noreferrer" aria-label="Ko-fi">
-            <svg
-              viewBox="0 0 24 24"
-              width="16"
-              height="16"
-              stroke="currentColor"
-              stroke-width="2"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round">
-              <path
-                d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.061-4.114-.714-1.111-.014-2.61 1.095-2.599 1.119.012 1.511.706 2.414 1.658 0 0 .725-1.069 2.418-1.568s2.739 1.268 2.563 2.714zM20.758 11.8c-.875 1.544-2.529 1.706-2.529 1.706s.015-1.594.026-2.662c.005-.595.044-1.07.126-1.405 1.543.02 2.923.167 3.321 1.258.118.318.067.828-.067 1.411z" />
-            </svg>
-          </a>
-        </div>
-      </div>
-      <div class="terminal-body">
-        <div class="prompt">
-          <span class="prompt-user">scetrov</span><span class="prompt-at">@</span
-          ><span class="prompt-host">scetrov.live</span><span class="prompt-sep">:</span
-          ><span class="prompt-dir">~</span><span class="prompt-dollar">$</span>
-          <span class="prompt-cmd">tree --links</span>
-        </div>
-        <div class="tree-output" aria-label="Project tree">
-          <div class="tree-row root-row">
-            <span class="tree-name"><span class="tree-dir">scetrov/</span></span>
-            <span class="tree-meta"></span>
-          </div>
 
-          <div class="tree-row">
-            <span class="tree-name"><span class="tree-connector">├── </span><span class="tree-dir">docs/</span></span>
-            <span class="tree-meta"># documentation</span>
-          </div>
-          <div class="tree-row">
-            <span class="tree-name"
-              ><span class="tree-connector">│ └── </span
-              ><a class="tree-link" href="https://frontier.scetrov.live" target="_blank" rel="noopener noreferrer"
-                >frontier.scetrov.live</a
-              ></span
-            >
-            <span class="tree-meta"
-              ><span class="tree-tag tree-tag-go">[Hugo]</span
-              ><span class="tree-annotation">Unofficial development notes</span></span
-            >
-          </div>
-          <div class="tree-row">
-            <span class="tree-name"
-              ><span class="tree-connector">│ └── </span
-              ><a
-                class="tree-link"
-                href="https://streamersupport.scetrov.live/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >streamersupport</a
-              ></span
-            >
-            <span class="tree-meta"
-              ><span class="tree-tag tree-tag-go">[Hugo]</span
-              ><span class="tree-annotation">Warsaken streamer support</span></span
-            >
-          </div>
-          <div class="tree-row spacer-row">
-            <span class="tree-name"><span class="tree-connector">│</span></span>
-            <span class="tree-meta"></span>
-          </div>
-          <div class="tree-row">
-            <span class="tree-name"><span class="tree-connector">├── </span><span class="tree-dir">tools/</span></span>
-            <span class="tree-meta"># deployed</span>
-          </div>
-          <div class="tree-row">
-            <span class="tree-name"
-              ><span class="tree-connector">│ ├── </span
-              ><a class="tree-link" href="https://fmap.scetrov.live/" target="_blank" rel="noopener noreferrer"
-                >fmap</a
-              ></span
-            >
-            <span class="tree-meta"
-              ><span class="tree-tag tree-tag-ts">[TypeScript]</span
-              ><span class="tree-annotation">EVE Frontier World Map</span></span
-            >
-          </div>
-          <div class="tree-row">
-            <span class="tree-name"
-              ><span class="tree-connector">│ └── </span
-              ><a class="tree-link" href="https://freeram.scetrov.live/" target="_blank" rel="noopener noreferrer"
-                >freeram</a
-              ></span
-            >
-            <span class="tree-meta"
-              ><span class="tree-tag tree-tag-ts">[TypeScript]</span
-              ><span class="tree-annotation">WAX blockchain memory diagnostics</span></span
-            >
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>scetrov — tree</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-          <div class="tree-row spacer-row">
-            <span class="tree-name"><span class="tree-connector">│</span></span>
-            <span class="tree-meta"></span>
-          </div>
-
-          <div class="tree-row">
-            <span class="tree-name"><span class="tree-connector">├── </span><span class="tree-dir">sdk/</span></span>
-            <span class="tree-meta"># libraries</span>
-          </div>
-          <div class="tree-row">
-            <span class="tree-name"
-              ><span class="tree-connector">│ ├── </span
-              ><a class="tree-link" href="https://github.com/Scetrov/efctl" target="_blank" rel="noopener noreferrer"
-                >efctl</a
-              ></span
-            >
-            <span class="tree-meta"
-              ><span class="tree-tag tree-tag-go">[Go]</span
-              ><span class="tree-annotation">EVE Frontier builder tool</span></span
-            >
-          </div>
-          <div class="tree-row">
-            <span class="tree-name"
-              ><span class="tree-connector">│ ├── </span
-              ><a
-                class="tree-link"
-                href="https://github.com/Scetrov/evefrontier-rs"
-                target="_blank"
-                rel="noopener noreferrer"
-                >evefrontier-rs</a
-              ></span
-            >
-            <span class="tree-meta"
-              ><span class="tree-tag tree-tag-rs">[Rust]</span
-              ><span class="tree-annotation">EVE Frontier pathfinfing tools</span></span
-            >
-          </div>
-          <div class="tree-row">
-            <span class="tree-name"
-              ><span class="tree-connector">│ └── </span
-              ><a
-                class="tree-link"
-                href="https://github.com/Scetrov/FrontierSharp"
-                target="_blank"
-                rel="noopener noreferrer"
-                >FrontierSharp</a
-              ></span
-            >
-            <span class="tree-meta"
-              ><span class="tree-tag tree-tag-cs">[C#]</span
-              ><span class="tree-annotation">.NET SDK for EVE Frontier World API</span></span
-            >
-          </div>
-
-          <div class="tree-row spacer-row">
-            <span class="tree-name"><span class="tree-connector">│</span></span>
-            <span class="tree-meta"></span>
-          </div>
-
-          <div class="tree-row">
-            <span class="tree-name"><span class="tree-connector">├── </span><span class="tree-dir">tools/</span></span>
-            <span class="tree-meta"># utilities</span>
-          </div>
-          <div class="tree-row">
-            <span class="tree-name"
-              ><span class="tree-connector">│ ├── </span
-              ><a class="tree-link" href="https://github.com/Scetrov/void-eid" target="_blank" rel="noopener noreferrer"
-                >void-eid</a
-              ></span
-            >
-            <span class="tree-meta"
-              ><span class="tree-tag tree-tag-rs">[Rust]</span
-              ><span class="tree-annotation">EVE Frontier IdAM Solution</span></span
-            >
-          </div>
-          <div class="tree-row">
-            <span class="tree-name"
-              ><span class="tree-connector">│ └── </span
-              ><a
-                class="tree-link"
-                href="https://github.com/Scetrov/sui_vanity_grinder"
-                target="_blank"
-                rel="noopener noreferrer"
-                >sui_vanity_grinder</a
-              ></span
-            >
-            <span class="tree-meta"
-              ><span class="tree-tag tree-tag-rs">[Rust]</span
-              ><span class="tree-annotation">Sui Vanity Wallet Generator</span></span
-            >
-          </div>
-
-          <div class="tree-row spacer-row">
-            <span class="tree-name"><span class="tree-connector">│</span></span>
-            <span class="tree-meta"></span>
-          </div>
-
-          <div class="tree-row">
-            <span class="tree-name"><span class="tree-connector">├── </span><span class="tree-dir">data/</span></span>
-            <span class="tree-meta"># analysis</span>
-          </div>
-          <div class="tree-row">
-            <span class="tree-name"
-              ><span class="tree-connector">│ ├── </span
-              ><a
-                class="tree-link"
-                href="https://github.com/Scetrov/evefrontier_datasets"
-                target="_blank"
-                rel="noopener noreferrer"
-                >evefrontier_datasets</a
-              ></span
-            >
-            <span class="tree-meta"
-              ><span class="tree-tag tree-tag-py">[Python]</span><span class="tree-annotation">curated data</span></span
-            >
-          </div>
-          <div class="tree-row">
-            <span class="tree-name"
-              ><span class="tree-connector">│ └── </span
-              ><a
-                class="tree-link"
-                href="https://github.com/Scetrov/eve_frontier_dataviz"
-                target="_blank"
-                rel="noopener noreferrer"
-                >eve_frontier_dataviz</a
-              ></span
-            >
-            <span class="tree-meta"
-              ><span class="tree-tag tree-tag-py">[Python]</span
-              ><span class="tree-annotation">Blender Plugin to Visualize EVE Frontier spatial data</span></span
-            >
-          </div>
-
-          <div class="tree-row spacer-row">
-            <span class="tree-name"><span class="tree-connector">│</span></span>
-            <span class="tree-meta"></span>
-          </div>
-
-          <div class="tree-row">
-            <span class="tree-name"><span class="tree-connector">└── </span><span class="tree-dir">infra/</span></span>
-            <span class="tree-meta"># system</span>
-          </div>
-          <div class="tree-row">
-            <span class="tree-name"
-              ><span class="tree-connector"> └── </span
-              ><a class="tree-link" href="https://github.com/Scetrov/nixos" target="_blank" rel="noopener noreferrer"
-                >nixos</a
-              ></span
-            >
-            <span class="tree-meta"
-              ><span class="tree-tag tree-tag-nix">[Nix]</span><span class="tree-annotation">NixOS config</span></span
-            >
-          </div>
-
-          <div class="tree-row spacer-row">
-            <span class="tree-name"><span class="tree-connector"></span></span>
-            <span class="tree-meta"></span>
-          </div>
-
-          <div class="tree-summary">12 items, 6 directories</div>
-        </div>
-        <div class="prompt">
-          <span class="prompt-user">scetrov</span><span class="prompt-at">@</span
-          ><span class="prompt-host">scetrov.live</span><span class="prompt-sep">:</span
-          ><span class="prompt-dir">~</span><span class="prompt-dollar">$</span> <span class="cursor">▋</span>
-        </div>
+<body>
+  <div class="terminal">
+    <div class="terminal-chrome">
+      <img src="profile.png" alt="scetrov" class="profile-pic" />
+      <span class="chrome-title aberration" data-text="scetrov@scetrov.live:~">scetrov@scetrov.live:~</span>
+      <div class="chrome-socials">
+        <a href="https://github.com/Scetrov" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 .296a12 12 0 0 0-3.794 23.386c.6.11.82-.258.82-.577v-2.165c-3.338.726-4.042-1.415-4.042-1.415-.546-1.387-1.333-1.757-1.333-1.757-1.09-.744.083-.728.083-.728 1.205.085 1.84 1.238 1.84 1.238 1.07 1.835 2.807 1.304 3.492.997.108-.775.419-1.304.762-1.603-2.665-.304-5.466-1.333-5.466-5.932 0-1.311.469-2.382 1.237-3.222-.124-.303-.536-1.526.118-3.18 0 0 1.01-.323 3.31 1.23a11.52 11.52 0 0 1 6.026 0c2.3-1.553 3.309-1.23 3.309-1.23.655 1.654.243 2.877.12 3.18.77.84 1.236 1.911 1.236 3.222 0 4.61-2.804 5.625-5.476 5.922.43.37.813 1.102.813 2.222v3.293c0 .322.218.694.825.576A12 12 0 0 0 12 .296Z" />
+          </svg>
+        </a>
+        <a href="https://www.nuget.org/profiles/Scetrov" target="_blank" rel="noopener noreferrer" aria-label="NuGet">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 8.5 12 4l8 4.5v7L12 20l-8-4.5z" />
+            <path d="M8 10.5 12 8l4 2.5v4L12 17l-4-2.5z" />
+          </svg>
+        </a>
+        <a href="https://x.com/scetrov" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+            <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+          </svg>
+        </a>
+        <a href="https://www.twitch.tv/scetrov" target="_blank" rel="noopener noreferrer" aria-label="Twitch">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7" />
+          </svg>
+        </a>
+        <a href="https://www.youtube.com/@scetrov" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+          </svg>
+        </a>
+        <a href="https://ko-fi.com/scetrov" target="_blank" rel="noopener noreferrer" aria-label="Ko-fi">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.061-4.114-.714-1.111-.014-2.61 1.095-2.599 1.119.012 1.511.706 2.414 1.658 0 0 .725-1.069 2.418-1.568s2.739 1.268 2.563 2.714zM20.758 11.8c-.875 1.544-2.529 1.706-2.529 1.706s.015-1.594.026-2.662c.005-.595.044-1.07.126-1.405 1.543.02 2.923.167 3.321 1.258.118.318.067.828-.067 1.411z" />
+          </svg>
+        </a>
       </div>
     </div>
-  </body>
+    <div class="terminal-body">
+      <div class="prompt">
+        <span class="prompt-user">scetrov</span><span class="prompt-at">@</span><span
+          class="prompt-host">scetrov.live</span><span class="prompt-sep">:</span><span class="prompt-dir">~</span><span
+          class="prompt-dollar">$</span>
+        <span class="prompt-cmd">tree --links</span>
+      </div>
+      <div class="tree-output" aria-label="Project tree">
+        <div class="tree-row root-row">
+          <span class="tree-name"><span class="tree-dir">scetrov/</span></span>
+          <span class="tree-meta"></span>
+        </div>
+
+        <div class="tree-row">
+          <span class="tree-name"><span class="tree-connector">├── </span><span class="tree-dir">docs/</span></span>
+          <span class="tree-meta"># documentation</span>
+        </div>
+        <div class="tree-row">
+          <span class="tree-name"><span class="tree-connector">│ └── </span><a class="tree-link"
+              href="https://frontier.scetrov.live" target="_blank"
+              rel="noopener noreferrer">frontier.scetrov.live</a></span>
+          <span class="tree-meta"><span class="tree-tag tree-tag-go">[Hugo]</span><span
+              class="tree-annotation">Unofficial development notes</span></span>
+        </div>
+        <div class="tree-row">
+          <span class="tree-name"><span class="tree-connector">│ └── </span><a class="tree-link"
+              href="https://streamersupport.scetrov.live/" target="_blank"
+              rel="noopener noreferrer">streamersupport</a></span>
+          <span class="tree-meta"><span class="tree-tag tree-tag-go">[Hugo]</span><span class="tree-annotation">Warsaken
+              streamer support</span></span>
+        </div>
+        <div class="tree-row spacer-row">
+          <span class="tree-name"><span class="tree-connector">│</span></span>
+          <span class="tree-meta"></span>
+        </div>
+        <div class="tree-row">
+          <span class="tree-name"><span class="tree-connector">├── </span><span class="tree-dir">services/</span></span>
+          <span class="tree-meta"># services and solutions</span>
+        </div>
+        <div class="tree-row">
+          <span class="tree-name"><span class="tree-connector">│ ├── </span><a class="tree-link"
+              href="https://github.com/Scetrov/void-eid" target="_blank" rel="noopener noreferrer">void-eid</a></span>
+          <span class="tree-meta"><span class="tree-tag tree-tag-rs">[Rust]</span><span class="tree-annotation">EVE
+              Frontier IdAM Solution</span></span>
+        </div>
+        <div class="tree-row">
+          <span class="tree-name"><span class="tree-connector">│ ├── </span><a class="tree-link"
+              href="https://fmap.scetrov.live/" target="_blank" rel="noopener noreferrer">fmap</a></span>
+          <span class="tree-meta"><span class="tree-tag tree-tag-ts">[TypeScript]</span><span
+              class="tree-annotation">EVE Frontier World Map</span></span>
+        </div>
+        <div class="tree-row">
+          <span class="tree-name"><span class="tree-connector">│ └── </span><a class="tree-link"
+              href="https://freeram.scetrov.live/" target="_blank" rel="noopener noreferrer">freeram</a></span>
+          <span class="tree-meta"><span class="tree-tag tree-tag-ts">[TypeScript]</span><span
+              class="tree-annotation">WAX blockchain memory diagnostics</span></span>
+        </div>
+
+        <div class="tree-row spacer-row">
+          <span class="tree-name"><span class="tree-connector">│</span></span>
+          <span class="tree-meta"></span>
+        </div>
+
+        <div class="tree-row">
+          <span class="tree-name"><span class="tree-connector">├── </span><span class="tree-dir">sdk/</span></span>
+          <span class="tree-meta"># libraries</span>
+        </div>
+        <div class="tree-row">
+          <span class="tree-name"><span class="tree-connector">│ ├── </span><a class="tree-link"
+              href="https://github.com/Scetrov/efctl" target="_blank" rel="noopener noreferrer">efctl</a></span>
+          <span class="tree-meta"><span class="tree-tag tree-tag-go">[Go]</span><span class="tree-annotation">EVE
+              Frontier builder tool</span></span>
+        </div>
+        <div class="tree-row">
+          <span class="tree-name"><span class="tree-connector">│ ├── </span><a class="tree-link"
+              href="https://github.com/Scetrov/evefrontier-rs" target="_blank"
+              rel="noopener noreferrer">evefrontier-rs</a></span>
+          <span class="tree-meta"><span class="tree-tag tree-tag-rs">[Rust]</span><span class="tree-annotation">EVE
+              Frontier pathfinfing tools</span></span>
+        </div>
+        <div class="tree-row">
+          <span class="tree-name"><span class="tree-connector">│ └── </span><a class="tree-link"
+              href="https://github.com/Scetrov/FrontierSharp" target="_blank"
+              rel="noopener noreferrer">FrontierSharp</a></span>
+          <span class="tree-meta"><span class="tree-tag tree-tag-cs">[C#]</span><span class="tree-annotation">.NET SDK
+              for EVE Frontier World API</span></span>
+        </div>
+
+        <div class="tree-row spacer-row">
+          <span class="tree-name"><span class="tree-connector">│</span></span>
+          <span class="tree-meta"></span>
+        </div>
+
+        <div class="tree-row">
+          <span class="tree-name"><span class="tree-connector">├── </span><span class="tree-dir">utils/</span></span>
+          <span class="tree-meta"># utilities</span>
+        </div>
+        <div class="tree-row">
+          <span class="tree-name"><span class="tree-connector">│ └── </span><a class="tree-link"
+              href="https://github.com/Scetrov/sui_vanity_grinder" target="_blank"
+              rel="noopener noreferrer">sui_vanity_grinder</a></span>
+          <span class="tree-meta"><span class="tree-tag tree-tag-rs">[Rust]</span><span class="tree-annotation">Sui
+              Vanity Wallet Generator</span></span>
+        </div>
+
+        <div class="tree-row spacer-row">
+          <span class="tree-name"><span class="tree-connector">│</span></span>
+          <span class="tree-meta"></span>
+        </div>
+
+        <div class="tree-row">
+          <span class="tree-name"><span class="tree-connector">├── </span><span class="tree-dir">data/</span></span>
+          <span class="tree-meta"># analysis</span>
+        </div>
+        <div class="tree-row">
+          <span class="tree-name"><span class="tree-connector">│ ├── </span><a class="tree-link"
+              href="https://github.com/Scetrov/evefrontier_datasets" target="_blank"
+              rel="noopener noreferrer">evefrontier_datasets</a></span>
+          <span class="tree-meta"><span class="tree-tag tree-tag-py">[Python]</span><span class="tree-annotation">EVE
+              Frontier Curated Data</span></span>
+        </div>
+        <div class="tree-row">
+          <span class="tree-name"><span class="tree-connector">│ └── </span><a class="tree-link"
+              href="https://github.com/Scetrov/eve_frontier_dataviz" target="_blank"
+              rel="noopener noreferrer">eve_frontier_dataviz</a></span>
+          <span class="tree-meta"><span class="tree-tag tree-tag-py">[Python]</span><span
+              class="tree-annotation">Blender Plugin to Visualize EVE Frontier spatial data</span></span>
+        </div>
+
+        <div class="tree-row spacer-row">
+          <span class="tree-name"><span class="tree-connector">│</span></span>
+          <span class="tree-meta"></span>
+        </div>
+
+        <div class="tree-row">
+          <span class="tree-name"><span class="tree-connector">└── </span><span class="tree-dir">infra/</span></span>
+          <span class="tree-meta"># system</span>
+        </div>
+        <div class="tree-row">
+          <span class="tree-name"><span class="tree-connector"> └── </span><a class="tree-link"
+              href="https://github.com/Scetrov/nixos" target="_blank" rel="noopener noreferrer">nixos</a></span>
+          <span class="tree-meta"><span class="tree-tag tree-tag-nix">[Nix]</span><span class="tree-annotation">NixOS
+              config</span></span>
+        </div>
+
+        <div class="tree-row spacer-row">
+          <span class="tree-name"><span class="tree-connector"></span></span>
+          <span class="tree-meta"></span>
+        </div>
+
+        <div class="tree-summary">12 items, 6 directories</div>
+      </div>
+      <div class="prompt">
+        <span class="prompt-user">scetrov</span><span class="prompt-at">@</span><span
+          class="prompt-host">scetrov.live</span><span class="prompt-sep">:</span><span class="prompt-dir">~</span><span
+          class="prompt-dollar">$</span> <span class="cursor">▋</span>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
