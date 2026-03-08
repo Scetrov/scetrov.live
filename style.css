@@ -368,6 +368,31 @@ body::-webkit-scrollbar-corner,
 .prompt-dollar { color: var(--dim); }
 .prompt-cmd  { color: var(--text); }
 
+.js .type-target {
+  visibility: hidden;
+}
+
+.js .type-target.is-ready {
+  visibility: visible;
+}
+
+.js .tree-output,
+.js .prompt-cmd.type-target {
+  contain: content;
+}
+
+.terminal-body.is-typing .tree-link {
+  pointer-events: none;
+}
+
+.terminal-body.is-typing .prompt:last-child {
+  opacity: 0.4;
+}
+
+.terminal-body.is-typing .prompt:last-child .cursor {
+  animation-duration: 0.6s;
+}
+
 .cursor {
   color: var(--teal);
   animation: blink 1s step-end infinite;
@@ -463,6 +488,12 @@ body::-webkit-scrollbar-corner,
 .tree-summary {
   margin-top: 0.8rem;
   color: var(--text);
+}
+
+.privacy-line {
+  margin-top: 0.4rem;
+  color: var(--dim);
+  font-size: 0.92em;
 }
 
 .terminal-body > .prompt:last-child {
