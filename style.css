@@ -28,6 +28,9 @@ body {
   justify-content: center;
   padding: 0.75rem;
   overflow: auto;
+  text-shadow: 
+    -1.5px 0 0 rgba(255, 92, 138, 0.4),
+    1.5px 0 0 rgba(108, 198, 255, 0.4);
 }
 
 body::before,
@@ -49,6 +52,9 @@ body::after {
   background:
     radial-gradient(circle at center, transparent 58%, rgba(0, 0, 0, 0.48) 100%);
   mix-blend-mode: multiply;
+  box-shadow: 
+    inset 12px 0 32px rgba(255, 92, 138, 0.25),
+    inset -12px 0 32px rgba(108, 198, 255, 0.25);
 }
 
 body,
@@ -98,8 +104,8 @@ body::-webkit-scrollbar-corner,
   display: flex;
   flex-direction: column;
   width: min(94vw, 1120px);
-  height: min(90vh, 880px);
-  max-height: calc(100dvh - 1.5rem);
+  height: 96vh;
+  max-height: 96vh;
   background:
     linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02) 16%, transparent 100%),
     var(--surface);
@@ -133,8 +139,10 @@ body::-webkit-scrollbar-corner,
   inset: 1px;
   border-radius: 8px;
   box-shadow:
-    -2px 0 0 rgba(255, 92, 138, 0.16),
-    2px 0 0 rgba(108, 198, 255, 0.16);
+    inset 10px 0 20px rgba(255, 92, 138, 0.15),
+    inset -10px 0 20px rgba(108, 198, 255, 0.15),
+    -4px 0 8px rgba(255, 92, 138, 0.25),
+    4px 0 8px rgba(108, 198, 255, 0.25);
   opacity: 0.9;
 }
 
@@ -151,21 +159,14 @@ body::-webkit-scrollbar-corner,
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.chrome-dots {
-  display: flex;
-  gap: 6px;
-}
-
-.dot {
-  width: 11px;
-  height: 11px;
+.profile-pic {
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  box-shadow: 0 0 14px currentColor;
+  object-fit: cover;
+  border: 1px solid rgba(108, 198, 255, 0.4);
+  box-shadow: 0 0 10px rgba(108, 198, 255, 0.2);
 }
-
-.dot-r { background: var(--coral); }
-.dot-y { background: var(--amber); }
-.dot-g { background: var(--teal); }
 
 .chrome-title {
   position: relative;
@@ -177,8 +178,8 @@ body::-webkit-scrollbar-corner,
 
 .aberration {
   text-shadow:
-    -0.045em 0 rgba(255, 92, 138, 0.42),
-    0.045em 0 rgba(108, 198, 255, 0.34);
+    -0.06em 0 rgba(255, 92, 138, 0.6),
+    0.06em 0 rgba(108, 198, 255, 0.5);
 }
 
 .aberration::before,
@@ -187,7 +188,7 @@ body::-webkit-scrollbar-corner,
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.18;
+  opacity: 0.25;
 }
 
 .aberration::before {
