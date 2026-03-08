@@ -176,6 +176,35 @@ body::-webkit-scrollbar-corner,
   text-transform: uppercase;
 }
 
+.chrome-socials {
+  margin-left: auto;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.chrome-socials a {
+  color: var(--dim);
+  transition: color 0.15s ease-out, transform 0.1s;
+  display: flex;
+}
+
+.chrome-socials a:hover {
+  color: var(--sky);
+  transform: translateY(-1px);
+}
+
+.chrome-socials svg {
+  width: 18px;
+  height: 18px;
+  filter: drop-shadow(0 0 8px rgba(108, 198, 255, 0.0));
+  transition: filter 0.15s;
+}
+
+.chrome-socials a:hover svg {
+  filter: drop-shadow(0 0 8px rgba(108, 198, 255, 0.4));
+}
+
 .aberration {
   text-shadow:
     -0.06em 0 rgba(255, 92, 138, 0.6),
