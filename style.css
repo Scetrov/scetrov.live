@@ -181,12 +181,19 @@ body::-webkit-scrollbar-corner,
   display: flex;
   gap: 1rem;
   align-items: center;
+  position: relative;
+  top: 1px;
 }
 
 .chrome-socials a {
   color: var(--dim);
   transition: color 0.15s ease-out, transform 0.1s;
-  display: flex;
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
 }
 
 .chrome-socials a:hover {
@@ -195,6 +202,7 @@ body::-webkit-scrollbar-corner,
 }
 
 .chrome-socials svg {
+  display: block;
   width: 18px;
   height: 18px;
   filter: drop-shadow(0 0 8px rgba(108, 198, 255, 0.0));
